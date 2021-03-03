@@ -1,0 +1,29 @@
+/* * * * * * * * * * *
+* * Chat login infos *
+*/
+.chat-login-infos {
+
+  @include margin($top: $gutter);
+  @include size(100%, auto);
+  padding: 2rem;
+  border-radius: 20px;
+  background-color: lightgray;
+  
+  /* * * * * * * * * * 
+  * * Chat login info *
+  */
+  &__info {
+
+    @include flex(normal, center, row);
+    @include size(100%, auto);
+
+  }
+  /* * * * * * * * * * * * * * * 
+  * * Chat login info first item *
+  */
+  &__info:first-of-type {
+
+    @include margin($bottom: 1rem);
+
+  }
+}

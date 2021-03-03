@@ -1,0 +1,13 @@
+/* * * * * * * * * * * *
+* * Chat messages list *
+*/
+.chat-messages-list {
+
+  @include margin($top: 150px, $bottom: 150px);
+  
+  padding: $gutter/1.2 $gutter/2 0 $gutter/2;
+  overflow: auto;
+
+  @media #{$small} { @include margin($top: 90px, $bottom: 90px); }
+  
+}

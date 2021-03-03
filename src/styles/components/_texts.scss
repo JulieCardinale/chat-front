@@ -1,0 +1,117 @@
+/* * * * * * * * * * * * *
+* * Chat login infos text *
+*/
+.chat-login-infos-text {
+
+    @include text(
+        $font-size-large: 1.2rem, 
+        $font-size-small: 1rem,
+        $font-family: $other-font,
+    );
+
+    @include margin($right: 1rem)
+
+}
+
+/* * * * * * * * * * *
+* * Chat intro text *
+*/
+.chat-intro-text {
+
+    @include text(
+        $font-size-large: 1rem, 
+        $font-size-small: 0.8rem,
+        $font-family: $other-font,
+        $align: center,
+    );
+
+    @include margin($top: $gutter, $bottom: $gutter / 5)
+
+}
+
+/* * * * * * * * * * * * * *
+* * Chat credit photo text *
+*/
+.chat-credit-photo-text {
+
+    @include text(
+        $font-size-large: 0.8rem, 
+        $font-size-small: 0.6rem,
+        $font-family: $other-font,
+        $align: center,
+    );
+
+    &  a {
+        text-decoration: underline;
+    }
+
+}
+
+/* * * * * * * * * * * * * * * * * *
+* * Chat text username header infos *
+*/
+.chat-text-username-header {
+
+    @include text(
+        $font-family: $title-font,
+        $font-size-large: 2rem, 
+        $font-size-small: 1.5rem, 
+        $isBold: true,
+        $color: $second-color,
+    );
+
+}
+
+/* * * * * * * * * * * * * * *
+* * Chat text message author *
+*/
+.chat-text-message-author {
+
+    @include text(
+        $font-family: $title-font,
+        $font-size-large: 1.2rem, 
+        $font-size-small: 0.8rem,
+        $color: $first-color,
+        $isBold: true
+    );
+
+    @include margin($bottom: $gutter / 5);
+}
+
+/* * * * * * * * * * * * * * *
+* * Chat text message content *
+*/
+.chat-text-message-content {
+
+    @include text(
+        $font-size-large: 1.5rem, 
+        $font-size-small: 1rem,
+        $color: $second-color,
+    );
+
+    @include margin($bottom: $gutter / 4);
+
+    border: 1px solid black;
+    display: inline-block;
+    border-radius: 20px;
+    background-color: black;
+    padding: 1rem;
+    
+}
+
+/* * * * * * * * * * * * * *
+* * Chat text message date *
+*/
+.chat-text-message-date {
+
+    @include text(
+        $font-size-large: 1rem, 
+        $font-size-small: 0.6rem,
+    );
+    font-style: italic;
+}
+
+
+
+
+

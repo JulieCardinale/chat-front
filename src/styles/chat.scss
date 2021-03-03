@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Rubik:wght@300;700&family=Source+Code+Pro:wght@200&display=swap');
+@import './libs/reset';
+@import './libs/vars';
+@import './libs/mixins';
+@import './components/buttons';
+@import './components/chat-conversation-form';
+@import './components/header';
+@import './components/home';
+@import './components/images';
+@import './components/inputs';
+@import './components/login-form';
+@import './components/login-infos';
+@import './components/login';
+@import './components/message';
+@import './components/messages-list';
+@import './components/texts';
+
+
+body {
+  
+  @include flex(center, normal, column);
+  @include size(100%, 100vh);
+  background-color: $background-color;
+
+}
+
+/* * * * * * * * * * * * * * * * * * * * 
+* Active only when we are on login page *
+*/ 
+.body-height-auto {
+
+  @media (max-height: 800px) {
+    @include size(100%, auto);
+  }
+
+}

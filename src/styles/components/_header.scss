@@ -1,0 +1,24 @@
+/* * * * * * *
+* chat header *
+*/ 
+.chat-header {
+    @include size(100%, 150px);
+    @include flex(space-between, center, row);
+
+    position: absolute;
+    top: 0;
+    padding: 2rem;
+    background-color: black;
+
+    @media #{$small} { @include size(100%, 90px) }
+
+    /* * * * * * * * * * * * *
+    * chat header user infos *
+    */ 
+    &__user-infos {
+
+      @include flex(space-between, center, row);
+
+    }
+}
+

@@ -1,0 +1,27 @@
+/* * * * *
+* COLORS *
+*/ 
+$background-color: #F2B0BA;
+$first-color: black;
+$second-color:white;
+$anchor-hover-color: #F2B0BA;
+
+/* * * *
+* FONTS *
+*/ 
+$title-font: 'Poppins', sans-serif;
+$text-font:'Rubik', sans-serif;
+$other-font:'Source Code Pro', monospace;
+
+/* * * * *
+* GUTTER *
+*/ 
+$gutter: 3rem;
+
+/* * * * * * *
+* BREAKPOINTS *
+*/ 
+$project-breakpoint-medium: 650px;
+$project-breakpoint-small: 450px;
+$medium: "screen and (max-width: #{$project-breakpoint-medium})";
+$small: "screen and (max-width: #{$project-breakpoint-small})";

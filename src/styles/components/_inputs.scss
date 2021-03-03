@@ -1,0 +1,38 @@
+/* * * * * * * * * * * * * *
+* * Chat conversation form *
+*/
+.chat-login-form-input {
+  @include input(
+    $label-font-size-large: 2rem,
+    $label-font-size-small: 1.5rem,
+    $input-font-size-large: 1.5rem, 
+    $input-font-size-small: 1rem,
+    $error-font-size-large: 1.5rem,
+    $error-font-size-small: 1rem,  
+    $input-has-shadow-effect: false,
+  )
+} 
+
+/* * * * * * * * * * * * * * * * * 
+* * Chat conversation form input *
+*/
+.chat-conversation-form-input {
+  @include input(
+    $space-bottom: 0,
+    $label-is-displayed: false,
+    $input-font-size-large: 1.5rem,
+    $input-font-size-small: 1rem,
+    $input-has-shadow-effect: false,
+    $input-has-focus-effect: false,
+    $input-padding: 0,
+    $errors-are-displayed: false,
+    $input-border-radius: 0,
+  );
+
+  @include margin($right: 1rem)
+
+} 
+
+
+
+

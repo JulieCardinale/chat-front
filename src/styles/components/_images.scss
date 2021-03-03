@@ -1,0 +1,38 @@
+/* * * * * * * * * * * * * * * * *
+* * Chat header user picture form *
+*/
+.chat-header-user-picture {
+
+    @include image($width-large: 100px, $height-large: 100px, $width-small: 65px, $height-small: 65px, $radius: 100%);
+    @include margin($right: 1rem)
+
+}
+
+/* * * * * * * * * * * * * * *
+* * Chat user picture message *
+*/
+.chat-user-picture-message {
+    @include image($width-large: 80px, $height-large: 80px, $width-small: 50px, $height-small: 50px, $radius: 100%);
+    @include margin($right: 1rem)
+}
+
+/* * * * * * * * * * * * * * * * * * *
+* * Chat user picture message others *
+*/
+.chat-user-picture-message-others {
+
+    @include image($width-large: 80px, $height-large: 80px, $width-small: 50px, $height-small: 50px, $radius: 100%);
+    @include margin($left: 1rem);
+    order: 1;
+
+}
+
+/* * * * * * * *
+* Chat Loader *
+*/ 
+.chat-loader {
+
+    @include image($width-large: 200px, $width-small: 150px);
+    @include margin($auto: true);
+
+}

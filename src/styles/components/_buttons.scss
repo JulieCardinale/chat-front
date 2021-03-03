@@ -1,0 +1,53 @@
+
+/* * * * * * * * * * * * *
+* chat login form button *
+*/ 
+.chat-login-form-button {
+    @include button(
+      $button-font-size-large: 1rem, 
+      $button-font-size-small: 0.8rem
+      );
+
+  }
+
+/* * * * * * * * * * * * *
+* chat login infos button *
+*/ 
+.chat-login-infos-button {
+  @include button(
+    $button-font-size-large: 1.5rem, 
+    $button-font-size-small: 1rem,
+    $button-width-small: inerit,
+    $button-color: $first-color,
+    $button-padding: 0,
+    $button-background-color: lightgray,
+    );
+}
+
+/* * * * * * * * * * * * * * * * * * *
+* chat conversation form infos button *
+*/ 
+.chat-conversation-form-button {
+  @include button(
+    $button-font-size-large: 2.5rem, 
+    $button-font-size-small: 1.5rem,
+    $button-width-small: inerit,
+    $button-color: $first-color,
+    $button-padding: 0,
+    $button-background-color: $second-color,
+    );
+}
+
+/* * * * * * * * * * *
+* chat logout button *
+*/ 
+.chat-logout-button {
+  @include button(
+    $button-font-size-large: 2.5rem, 
+    $button-font-size-small: 1.5rem,
+    $button-width-small: inerit,
+    $button-color: $second-color,
+    $button-padding: 0,
+    );
+}
+

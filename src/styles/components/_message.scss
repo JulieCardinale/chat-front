@@ -1,0 +1,28 @@
+/* * * * * * * * *
+* * Chat message *
+*/
+.chat-message {
+
+  @include flex(normal, flex-start, row);
+
+  @include margin($bottom: $gutter);
+
+  @media #{$small} { margin-bottom: $gutter };
+
+}
+
+/* * * * * * * * * * * * *
+* * Chat message others *
+*/
+.chat-message-others {
+
+  @extend .chat-message;
+
+  justify-content: flex-end;
+
+  &__author-content-date {
+
+    @include flex(normal, flex-end, column);
+
+  }
+}

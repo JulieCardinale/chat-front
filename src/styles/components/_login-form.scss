@@ -1,0 +1,14 @@
+/* * * * * * * * * * *
+* * Chat login infos *
+*/
+.chat-login-form {
+
+  @include flex(center, normal, column);
+
+  &__button {
+
+    @include flex(flex-end, normal, row);
+    
+  }
+
+}

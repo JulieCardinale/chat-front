@@ -1,0 +1,12 @@
+/* * * * * * * * * * *
+* * Chat login page *
+*/
+.chat-login {
+
+  @include flex(normal, normal, column);
+  @include size(400px, auto);
+  @include margin($auto: true);
+  padding : 75px 0;
+  @media #{$small} { @include size(90%, auto) };
+
+}

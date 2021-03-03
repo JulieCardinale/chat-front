@@ -1,0 +1,10 @@
+/* * * * * * *
+* chat home *
+*/ 
+.chat-home {
+    @include flex(normal, normal, column);
+    @include size(auto, 100vh);
+}
+
+
+

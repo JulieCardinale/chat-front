@@ -1,0 +1,426 @@
+/* * * * * * * *
+* * Image mixin *
+*
+* @description : A mixin for all image components.
+*
+* @args ----------------------------------------------------------------------------------
+* - $width-large               => Image width for large screens
+* - $width-medium              => Image width for medium screens (default: $width-large)
+* - $width-small               => Image width for small screens (default: $width-medium) 
+* - $height-large              => Image height for large screens
+* - $height-medium             => Image height for medium screens (default: $height-large)
+* - $height-small              => Image height for small screens (default: $height-medium)
+* - $radius                    => Image border radius (default: 0 0 0 0) (doc: TL TR BL BR)
+* - $fit                       => Image fit (default: fit) (options : fill, contain, cover, none, scale-down)
+* - $custom-breakpoint-medium  => Custom medium breakpoint (default: $default-custom-breakpoint-medium)
+* - $custom-breakpoint-small   => Custom small breakpoint (default: $default-custom-breakpoint-small)
+* -----------------------------------------------------------------------------------------
+*/
+@mixin image
+( 
+    $width-large: '',
+    $width-medium: $width-large,
+    $width-small: $width-medium,
+    $height-large: '',
+    $height-medium: $height-large,
+    $height-small: $height-medium,
+    $radius: 0 0 0 0,
+    $fit: cover,  
+    $custom-breakpoint-medium: $project-breakpoint-medium,
+    $custom-breakpoint-small: $project-breakpoint-small,  
+) 
+{  
+    display: block;
+    width: $width-large;
+    min-width: $width-large;
+    height: $height-large;
+    min-height: $height-large;
+    min-width: none;
+    border-radius: $radius;
+    object-fit: $fit;
+
+    @media screen and (max-width: $custom-breakpoint-medium) {
+
+        width: $width-medium;
+        min-width: $width-medium;
+        height: $height-medium;
+        min-height: $height-medium;
+
+    }
+
+    @media screen and (max-width: $custom-breakpoint-small) {
+
+        width: $width-small;
+        min-width: $width-small;
+        height: $width-small;
+        min-height: $width-small;
+
+    }
+}
+
+/* * * * * * * *
+* * Text mixin *
+*
+* @description : A mixin for all image components.
+*
+* @args -------------------------------------------------------------------------------------------------
+* - $font-family                => Font family (default : sans-serif)
+* - $align                      => Text alignement (default: justify)
+* - $color                      => Text color (default: white)
+* - $font-size-large            => Text size large screens (default: normal)
+* - $font-size-medium           => Text size medium screens (default: $size-large)
+* - $font-size-small            => Text size small screens (default: $size-medium)  
+* - $letter-spacing-large       => Letter spacing large screens (default: 0)
+* - $letter-spacing-medium      => Letter spacing medium screens (default : $spacing-large)
+* - $letter-spacing-small       => Letter spacing small screens (default : $spacing-medium)
+* - $line-height-large          => Line height large screens (default: normal)
+* - $line-height-medium         => Line height medium screens (default: $line-height-large)
+* - $line-height-small          => Line height small screens (default: $line-height-medium)
+* - $custom-breakpoint-medium   => Custom medium breakpoint (default: $default-custom-breakpoint-medium)
+* - $custom-breakpoint-small    => Custom small breakpoint (default: $default-custom-breakpoint-small)
+* - $isUppercase                => Is uppercase ? true, false (default: false)
+* - $isBold                     => Is bold ? true, false (default: false)
+* - $isAnchor                   => Specify if the text is an anchor (default: false)
+* - $isUnderlined               => Specify if the text is underlineded (default: false)
+* - $anchorHoverColor           => Choose hover anchor color (default :  rgb(106, 0, 255))
+* - $anchorFocusColor           => Choose focus anchor color (default : anchorHoverColor)
+* - $anchorVisitedColor         => Choose visited anchor color (default : inerit)
+* -------------------------------------------------------------------------------------------------------
+*/
+@mixin text 
+(
+    $font-family: $text-font,
+    $align: justify,
+    $color: $first-color,
+    $font-size-large: normal,
+    $font-size-medium: $font-size-large,  
+    $font-size-small: $font-size-medium,
+    $line-height-large: normal,
+    $line-height-medium: $line-height-large, 
+    $line-height-small: $line-height-medium,
+    $letter-spacing-large: 0,
+    $letter-spacing-medium: $letter-spacing-large,
+    $letter-spacing-small: $letter-spacing-medium,
+    $custom-breakpoint-medium: $project-breakpoint-medium,
+    $custom-breakpoint-small: $project-breakpoint-small,
+    $isUppercase: false,
+    $isBold: false,
+    $isUnderlined: false,
+    $isAnchor: false,
+    $anchorColor: $color,
+    $anchorHoverColor : $anchor-hover-color,
+    $anchorFocusColor : $anchorHoverColor,
+    $anchorVisitedColor:  inerit,
+) {  
+
+    font-family: $font-family;
+    text-align: $align;
+    color: $color;
+    font-size: $font-size-large;
+    line-height: $line-height-large;
+    letter-spacing: $letter-spacing-large;
+    word-break: break-word;
+
+    @if $isUppercase {
+        text-transform: uppercase;
+    }
+
+    @if $isBold {
+        font-weight: 700;
+    }
+
+    @if $isUnderlined {
+        text-decoration: underline;
+    }
+
+    @if $isAnchor {
+
+        color: $anchorColor;
+
+        &:hover {
+
+            color: $anchorHoverColor;
+            cursor: pointer;
+            text-decoration: underline;
+
+        }
+
+        &:focus {
+
+            color: $anchorFocusColor;
+
+        }
+
+        &:visited {
+
+            color: $anchorVisitedColor;
+
+        }
+
+    }
+
+    @media screen and (max-width: $custom-breakpoint-medium) {
+
+        font-size: $font-size-medium;
+        line-height: $line-height-medium;
+        letter-spacing: $letter-spacing-medium;
+
+    }
+
+    @media screen and (max-width: $custom-breakpoint-small) {
+
+        font-size: $font-size-small;
+        line-height: $line-height-small;
+        letter-spacing: $letter-spacing-small;
+
+    }
+
+}
+
+/* * * * * * * *
+* * Marge mixin *
+*
+* @description : A mixin for margin
+*
+* @args ----------------------------------------------------------------------------------
+* - $top       => top space (default 0)
+* - $right     => right space (default 0)
+* - $bottom    => bottom space (default 0)
+* - $left      => left space (default 0)
+* - $auto      => is margin auto ? (default: false)
+* -----------------------------------------------------------------------------------------
+*/
+@mixin margin($top: 0, $bottom: 0, $left: 0, $right: 0, $auto: false) {
+    /* top | right | bottom | left */
+    margin: $top $right $bottom $left;
+    @if $auto { margin: auto }
+}
+
+
+/* * * * * * * *
+* * flex mixin *
+*
+* @description : A mixin for flex
+*
+* @args ----------------------------------------------------------------------------------
+* - $justifyContent => https://developer.mozilla.org/fr/docs/Web/CSS/justify-content#syntaxe
+* - $alignItems     => https://developer.mozilla.org/fr/docs/Web/CSS/align-items#syntaxe
+* - $alignItems     => https://developer.mozilla.org/fr/docs/Web/CSS/flex-direction#syntaxe
+* -----------------------------------------------------------------------------------------
+*/
+@mixin flex($justifyContent, $alignItems, $flexDirection) {
+    display: flex;
+    justify-content: $justifyContent;
+    align-items: $alignItems;
+    flex-direction: $flexDirection;
+}
+
+
+/* * * * * * * *
+* * size mixin *
+*
+* @description : A mixin for size
+*
+* @args ----------------------------------------------------------------------------------
+* - $w => width https://developer.mozilla.org/fr/docs/Web/CSS/width
+* - $h => height https://developer.mozilla.org/fr/docs/Web/CSS/height
+* -----------------------------------------------------------------------------------------
+*/
+@mixin size($w, $h) {
+    width: $w;
+    height: $h;
+}
+
+
+/* * * * * * * *
+* * input mixin *
+*
+* @description : A mixin for inputs
+*
+* @args ----------------------------------------------------------------------------------
+* - $space-bottom               => global space bottom
+*
+* - $label-is-displayed         => is label displayed ? (default : true)
+* - $label-font-family          => label font-family
+* - $label-color                => label color
+* - $label-font-size-large      => label font-size large
+* - $label-font-size-medium     => label font-size medium
+* - $label-font-size-small      => label font-size small
+* - $label-font-weight          => label font-weight (default : bold)
+
+* - $input-font-family          => input font-family
+* - $input-color                => input color
+* - $input-font-size-large      => input font-size large
+* - $input-font-size-medium     => input font-size medium
+* - $input-font-size-small      => input font-size small
+* - $input-has-shadow-effect    => has input shadow effect ? (default : true)
+* - $input-has-focus-effect     => has input shadow focus ? (default : true)
+* - $input-padding              => Input padding (default 1rem )
+* - $input-border-radius        => Input border radius (default 10px)
+* - $placeholder-color          => placeholder color
+
+* - $errors-are-displayed       => are errors displayed ? (default : true)
+* - $error-font-family          => error font-family
+* - $error-color                => error color
+* - $error-font-size-large      => error font-size large
+* - $error-font-size-medium     => error font-size medium
+* - $error-font-size-small      => error font-size small
+*
+* -----------------------------------------------------------------------------------------
+*/
+@mixin input(
+
+    $space-bottom: $gutter,
+
+    $label-is-displayed: true,
+    $label-font-family: $title-font,
+    $label-color: $first-color,
+    $label-font-size-large: normal,
+    $label-font-size-medium: $label-font-size-large,  
+    $label-font-size-small: $label-font-size-medium,
+    $label-font-weight: bold,
+
+    $input-font-family: $text-font,
+    $input-color: $first-color,
+    $input-font-size-large: normal,
+    $input-font-size-medium: $input-font-size-large,  
+    $input-font-size-small: $input-font-size-medium,
+    $input-has-shadow-effect: true,
+    $input-has-focus-effect: true,
+    $input-padding: 1rem,
+    $input-border-radius: 10px,
+
+    $placeholder-color: $background-color,
+
+    $errors-are-displayed: true,
+    $error-font-family: $text-font,
+    $error-color: $first-color,
+    $error-font-size-large: normal,
+    $error-font-size-medium: $error-font-size-large,  
+    $error-font-size-small: $error-font-size-medium,
+
+    ) {
+
+        /* * * * 
+        * global *
+        */         
+        @include flex(flex-start, normal, column);
+        @include size(100%, auto);
+        @include margin($bottom: $space-bottom);
+        
+        /* * * * 
+        * label *
+        */ 
+        @if $label-is-displayed {
+            &__label {
+                @include margin($bottom: $gutter / 3);
+                font-family: $label-font-family;
+                color: $label-color;
+                font-size: $label-font-size-large;
+                font-weight: $label-font-weight;
+                @media #{$medium} { font-size: $label-font-size-medium }
+                @media #{$small} { font-size: $label-font-size-small }
+            }
+        }
+
+        /* * * * 
+        * input *
+        */ 
+        &__input {
+            font-family: $text-font;
+            color: $first-color;
+            font-size: $input-font-size-large;
+            border-radius: $input-border-radius;
+            border: none;
+            padding: $input-padding;
+            &:-webkit-autofill {
+                box-shadow: 0 0 0px 1000px white inset;
+            }
+            &::placeholder{ 
+                color: $background-color;
+            }
+            @if $input-has-shadow-effect {
+                filter: drop-shadow(8px 8px 1px $first-color);
+                transition: filter 0.3s ease-in-out;
+            }
+            @if $input-has-focus-effect {
+                &:focus {
+                    border: 3px solid $first-color;
+                    filter: none;
+                }
+            }
+            @media #{$medium} { font-size: $input-font-size-medium }
+            @media #{$small} { font-size: $input-font-size-small }
+
+        }
+
+        /* * * * 
+        * error *
+        */ 
+        @if $errors-are-displayed {
+        &__error-message {
+            font-family: $error-font-family;
+            color: $error-color;
+            font-size: $error-font-size-large;
+            @include margin($top: $gutter / 2, $bottom: $gutter / 3);
+            @media #{$medium} { font-size: $error-font-size-medium }
+            @media #{$small} { font-size: $error-font-size-small }
+            }
+        } 
+}
+
+/* * * * * * * *
+* * button mixin *
+*
+* @description : A mixin for buttons
+*
+* @args ----------------------------------------------------------------------------------
+* - $button-font-size-large     => button font size large
+* - $button-font-size-medium    => button font size medium
+* - $button-font-size-small     => button font size small
+* - $button-padding             => button padding
+* - $button-width-small         => button width small
+* - $button-family              => button font family
+* - $button-color               => button font color
+* - $button-background-color    => button background color
+* - $button-hover-color         => button hover color
+* -----------------------------------------------------------------------------------------
+*/
+@mixin button(
+
+    $button-font-size-large: normal,
+    $button-font-size-medium: $button-font-size-large,  
+    $button-font-size-small: $button-font-size-medium,
+    $button-padding: 1rem,
+    $button-width-small: 100%,
+    $button-family: $text-font,
+    $button-color: $second-color,
+    $button-background-color: $first-color,
+    $button-hover-color: $anchor-hover-color,
+
+    ) 
+    {
+
+    font-size: $button-font-size-large;
+    font-family: $button-family;
+    color: $button-color;
+    background-color: $button-background-color;
+    font-weight: bold;
+    display: inline-block;
+    border: none;
+    border-radius: 10px;
+    padding: $button-padding;
+    transition: color 400ms ease-in-out;
+ 
+    &:hover { cursor: pointer; color: $background-color }
+
+    @media #{$medium} { font-size: $button-font-size-medium }
+
+    @media #{$small} { 
+        font-size: $button-font-size-small;
+        width: $button-width-small;
+    }
+
+}
+
+    
