@@ -13,16 +13,16 @@
     <a href="https://sass-lang.com" target="_blank" rel="noopener noreferrer"> 
         <img src="https://jcdle-porfolio.herokuapp.com/images/tools/icon_sass.png" alt="sass" width="50" height="50"/>
     </a>
-     <a href="https://parceljs.org/" target="_blank" rel="noopener noreferrer">
+     <a href="https://socket.io/" target="_blank" rel="noopener noreferrer">
         <img src="https://jcdle-porfolio.herokuapp.com/images/tools/icon_socket_io.png" alt="socket-io" width="50" height="50"/>
     </a>
-     <a href="https://parceljs.org/" target="_blank" rel="noopener noreferrer">
+     <a href="https://expressjs.com/fr/" target="_blank" rel="noopener noreferrer">
         <img src="https://jcdle-porfolio.herokuapp.com/images/tools/icon_express.png" alt="express" width="50" height="50"/>
     </a>
-    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noopener noreferrer">
-        <img src="https://jcdle-porfolio.herokuapp.com/images/tools/icon_react.png" alt="react" width="50" height="50"/>
+    <a href="https://fr.reactjs.org/" target="_blank" rel="noopener noreferrer">
+        <img src="https://jcdle-porfolio.herokuapp.com/images/tools/icon_react.png" alt="react" width="55" height="50"/>
     </a>
-    <a href="https://parceljs.org/" target="_blank" rel="noopener noreferrer">
+    <a href="https://redux.js.org/" target="_blank" rel="noopener noreferrer">
         <img src="https://jcdle-porfolio.herokuapp.com/images/tools/icon_redux_2.png" alt="redux" width="50" height="50"/>
     </a>
 </p> 
